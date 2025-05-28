@@ -3,7 +3,7 @@ import path from "path";
 
 export default defineConfig({
   // Указываем базовый путь для GitHub Pages
-  base: "/CodeCanvX/",
+  base: "/evweb/",
   root: "./",
 
   resolve: {

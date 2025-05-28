@@ -11,7 +11,10 @@ export default function Nav() {
   const logo = document.createElement("img");
   logo.className = "logo";
 
-  logo.src = "/evakuator_269_49_49_1_557.png";
+  logo.src = new URL(
+    "../../assets/evakuator_269_49_49_1_557.png",
+    import.meta.url
+  ).href;
   logo.alt = "ЭВАКУАТОР 24 НА 7";
 
   sectionLeft.appendChild(logo);
