@@ -1,0 +1,132 @@
+.main-article {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 80px;
+}
+
+.left-section {
+  margin: 30px 0 0 50px;
+}
+.left-section-text {
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 60px;
+}
+.left-section-list-block {
+  display: flex;
+  margin-top: 20px;
+  font-size: 22px;
+}
+
+.fa-solid,
+.fa-regular {
+  margin-right: 10px;
+  display: flex;
+  align-items: center;
+  color: rgb(243, 181, 49);
+}
+.photo-section {
+  max-width: 850px;
+}
+
+.telefon-pop-up-button {
+  width: 70px;
+  height: 70px;
+  background-color: green;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+.telefon-window {
+  position: fixed;
+  bottom: 20px; /* Поднимаем окно над кнопкой */
+  right: 20px; /* Такое же как у кнопки */
+  transform: none; /* Убираем центрирование */
+  border: solid 2px black;
+  width: 260px;
+  height: 350px;
+  background: white;
+  border-radius: 0px 20px 20px 20px;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  z-index: 1001;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.telefon-window.open {
+  display: flex;
+  opacity: 1;
+  visibility: visible;
+}
+.close-btn {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background-color: black;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+.logo-window {
+  width: 170px;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}
+
+.popup-content {
+  text-align: center;
+  margin-top: 15px;
+  font-weight: 600;
+  font-size: 18px;
+  width: 260px;
+}
+
+.second-popup-content {
+  text-align: center;
+  font-size: 19px;
+  width: 260px;
+  margin-top: 15px;
+}
+
+.third-popup-content {
+  width: 260px;
+  text-align: start;
+  margin: 20px 0 15px 10px;
+  font-size: 19px;
+}
+
+.fourth-popup-content {
+  width: 260px;
+  font-size: 19px;
+  text-align: start;
+  margin: 20px 0 15px 10px;
+}
+
+.main-number-block {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 220px;
+  height: 40px;
+  background-color: green;
+  border-radius: 10px;
+  border: solid 2px black;
+}
