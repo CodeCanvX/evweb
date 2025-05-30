@@ -3,7 +3,7 @@ import path from "path";
 
 export default defineConfig({
   // Указываем базовый путь для GitHub Pages
-  base: "/",
+  base: "/evweb/",
   root: "./",
 
   resolve: {
