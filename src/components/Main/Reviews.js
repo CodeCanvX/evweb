@@ -112,10 +112,10 @@ export default function Reviews() {
     currentSlide = index;
   }
 
-  setInterval(() => {
-    let next = (currentSlide + 1) % slides.length;
-    showSlide(next);
-  }, 5000);
+  // setInterval(() => {
+  //   let next = (currentSlide + 1) % slides.length;
+  //   showSlide(next);
+  // }, 5000);
 
   return section;
 }

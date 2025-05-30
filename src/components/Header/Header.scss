@@ -9,7 +9,7 @@ header {
 
 .left-section {
   margin-left: 45px;
-  margin-top: 55px;
+  margin-top: 50px;
 }
 .header-image {
   width: 700px;
@@ -44,4 +44,79 @@ header {
   text-decoration: none;
   border-radius: 10px;
   border: solid 2px black;
+}
+
+@media (max-width: 1350px) {
+  header {
+    height: 504px;
+  }
+  .header-image {
+    margin-top: 50px;
+    width: 600px;
+    height: 420px;
+  }
+}
+
+@media (max-width: 1230px) {
+  .header-image {
+    margin-top: 70px;
+    width: 500px;
+    height: 360px;
+  }
+}
+
+@media (max-width: 1100px) {
+  header {
+    height: 804px;
+  }
+
+  .main-header-article {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .header-image {
+    margin-top: 20px;
+    width: 600px;
+    height: 420px;
+  }
+}
+
+@media (max-width: 580px) {
+  header {
+    height: 650px;
+  }
+
+  .header-image {
+    width: 400px;
+    height: 300px;
+  }
+  .first-text {
+    font-size: 50px;
+    width: 300px;
+  }
+
+  .second-text {
+    font-size: 20px;
+    margin: 20px 0 40px 0;
+    width: 400px;
+  }
+}
+
+@media (max-width: 430px) {
+  header {
+    height: 600px;
+  }
+
+  .header-image {
+    width: 320px;
+    height: 240px;
+    margin-left: 40px;
+  }
+
+  .second-text {
+    font-size: 18px;
+
+    width: 340px;
+  }
 }
