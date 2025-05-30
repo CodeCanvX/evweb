@@ -1,18 +1,23 @@
 {
   "name": "evweb",
+  "version": "1.0.0",
   "private": true,
-  "version": "0.0.0",
+  "description": "Веб-сайт эвакуации автомобилей",
+  "homepage": "https://codecanvx.github.io/evweb",
   "type": "module",
-"scripts": {
-  "dev": "vite",
-  "build": "vite build",
-  "preview": "vite preview",
-  "deploy": "gh-pages -d dist"
-}
-,
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "deploy": "gh-pages -d dist"
+  },
+  "keywords": [],
+  "author": "CodeCanvX",
+  "license": "MIT",
   "devDependencies": {
     "gh-pages": "^6.3.0",
     "sass": "^1.89.0",
     "vite": "^6.3.5"
   }
 }
+
