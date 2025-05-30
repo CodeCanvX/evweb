@@ -1,9 +1,47 @@
-.header-text {
-  font-size: 65px;
-  margin: 60px 0 0 50px;
-  font-weight: 600;
+header {
+  background-color: #262526;
 }
 
-.green {
-  color: #07b900;
+.main-header-article {
+  display: flex;
+  justify-content: space-between;
+}
+
+.left-section {
+  margin-left: 45px;
+  margin-top: 55px;
+}
+.header-image {
+  width: 700px;
+  height: 500px;
+  margin-right: 25px;
+}
+
+.first-text {
+  font-size: 75px;
+  font-weight: 800;
+  width: 550px;
+  color: white;
+}
+
+.second-text {
+  margin: 40px 0 60px 0;
+  font-size: 22px;
+  line-height: 1.6;
+  width: 450px;
+  color: white;
+}
+
+.evakuator-button {
+  font-size: 25px;
+  width: 300px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ecc630;
+  color: black;
+  text-decoration: none;
+  border-radius: 10px;
+  border: solid 2px black;
 }

@@ -2,28 +2,44 @@ export default function () {
   const header = document.createElement("header");
   header.className = "header";
 
-  const articleHeader = document.createElement("article");
-  articleHeader.className = "article-header";
+  const mainHeaderArticle = document.createElement("article");
+  mainHeaderArticle.className = "main-header-article";
 
-  const sectionHeader = document.createElement("section");
-  sectionHeader.className = "section-header";
+  const leftSection = document.createElement("section");
+  leftSection.className = "left-section";
 
-  const headerText = document.createElement("div");
-  headerText.className = "header-text";
+  const firstText = document.createElement("div");
+  firstText.className = "first-text";
+  firstText.textContent = "Услуги эвакуатора";
 
-  const fullText = "Услуги эвакуатора в Луганске - 24 на 7";
-  const highlightedWord = "Луганске";
+  const secondText = document.createElement("div");
+  secondText.className = "second-text";
+  secondText.textContent =
+    "Круглосуточная и безопасная перевозка ваше автомобиля по Луганску и области.";
 
-  const highlightedText = fullText.replace(
-    highlightedWord,
-    `<span class="green">${highlightedWord}</span>`
-  );
+  const link = document.createElement("a");
+  link.href = "tel:+00000000000";
+  link.textContent = "Вызвать эвакуатор";
+  link.className = "evakuator-button";
 
-  headerText.innerHTML = highlightedText;
+  const rightSection = document.createElement("section");
+  rightSection.className = "right-section";
 
-  sectionHeader.appendChild(headerText);
-  articleHeader.appendChild(sectionHeader);
-  header.appendChild(articleHeader);
+  const backgroundImage = document.createElement("img");
+  backgroundImage.className = "header-image";
+  backgroundImage.src = new URL("../../assets/GAZ.png", import.meta.url).href;
+  backgroundImage.alt = "Фото эвакуатора";
+
+  leftSection.appendChild(firstText);
+  leftSection.appendChild(secondText);
+  leftSection.appendChild(link);
+
+  rightSection.appendChild(backgroundImage);
+
+  mainHeaderArticle.appendChild(leftSection);
+  mainHeaderArticle.appendChild(rightSection);
+
+  header.appendChild(mainHeaderArticle);
 
   return header;
 }
