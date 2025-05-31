@@ -1,6 +1,3 @@
-import MapTilerMap from "./MapTilerMap.js";
-import MapComponent from "./Map.js";
-
 export default function Footer() {
   const footer = document.createElement("footer");
   footer.className = "footer";
@@ -50,14 +47,37 @@ export default function Footer() {
   const rightSection = document.createElement("section");
   rightSection.className = "right-section";
 
-  const mapElement = MapTilerMap("map");
-  rightSection.appendChild(mapElement);
-  MapComponent(rightSection);
+  // Карта
+  const mapContainer = document.createElement("div");
+  mapContainer.id = "map";
+
+  mapContainer.className = "maps";
+  rightSection.appendChild(mapContainer);
 
   articleFooter.appendChild(leftSection);
   articleFooter.appendChild(rightSection);
-
   footer.appendChild(articleFooter);
+
+  // Подключаем API Яндекс.Карт
+  const ymapsScript = document.createElement("script");
+  ymapsScript.src =
+    "https://api-maps.yandex.ru/2.1/?lang=ru_RU&apikey=5278004d-10ba-462d-bd1b-c827e2d44b97";
+  ymapsScript.onload = () => {
+    window.ymaps.ready(() => {
+      const map = new ymaps.Map("map", {
+        center: [48.574041, 39.307815], // Луганск
+        zoom: 10,
+      });
+
+      const placemark = new ymaps.Placemark([48.574041, 39.307815], {
+        hintContent: "Луганск",
+        balloonContent: "Мы здесь!",
+      });
+
+      map.geoObjects.add(placemark);
+    });
+  };
+  document.head.appendChild(ymapsScript);
 
   return footer;
 }
