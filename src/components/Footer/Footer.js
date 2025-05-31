@@ -49,8 +49,7 @@ export default function Footer() {
 
   const maps = document.createElement("iframe");
   maps.className = "maps";
-  maps.src =
-    "https://yandex.ru/map-widget/v1/?ll=39.307280%2C48.574041&z=10&l=map";
+  maps.src = "https://yandex.ru/map-widget/v1/?ll=39.3078,48.5740&z=10";
   maps.setAttribute("allowfullscreen", "");
   maps.loading = "lazy";
 

@@ -22,8 +22,9 @@ export default defineConfig({
 
   build: {
     outDir: "dist",
+    minify: "esbuild", // это по умолчанию
+    sourcemap: false, // отключи если не нужен source-map
     assetsDir: "assets",
-    sourcemap: true,
     rollupOptions: {
       input: "./index.html",
       output: {

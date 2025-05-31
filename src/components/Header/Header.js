@@ -27,7 +27,7 @@ export default function () {
 
   const backgroundImage = document.createElement("img");
   backgroundImage.className = "header-image";
-  backgroundImage.src = new URL("../../assets/GAZ.png", import.meta.url).href;
+  backgroundImage.src = new URL("../../assets/GAZ.webp", import.meta.url).href;
   backgroundImage.alt = "Фото эвакуатора";
 
   leftSection.appendChild(firstText);
