@@ -1,3 +1,6 @@
+import MapTilerMap from "./MapTilerMap.js";
+import MapComponent from "./Map.js";
+
 export default function Footer() {
   const footer = document.createElement("footer");
   footer.className = "footer";
@@ -47,16 +50,13 @@ export default function Footer() {
   const rightSection = document.createElement("section");
   rightSection.className = "right-section";
 
-  const maps = document.createElement("iframe");
-  maps.className = "maps";
-  maps.src = "https://yandex.ru/map-widget/v1/?ll=39.3078,48.5740&z=10";
-  maps.setAttribute("allowfullscreen", "");
-  maps.loading = "lazy";
-
-  rightSection.appendChild(maps);
+  const mapElement = MapTilerMap("map");
+  rightSection.appendChild(mapElement);
+  MapComponent(rightSection);
 
   articleFooter.appendChild(leftSection);
   articleFooter.appendChild(rightSection);
+
   footer.appendChild(articleFooter);
 
   return footer;
