@@ -70,7 +70,10 @@ export default function Popup() {
   whatsappLink.target = "_blank";
 
   const whatsappIcon = document.createElement("img");
-  whatsappIcon.src = new URL("../../assets/WhatsApp.png", import.meta.url).href;
+  whatsappIcon.src = new URL(
+    "../../assets/WhatsApp.webp",
+    import.meta.url
+  ).href;
   whatsappIcon.alt = "WhatsApp";
   whatsappIcon.className = "whatsapp-icon popup-icon";
   whatsappLink.appendChild(whatsappIcon);

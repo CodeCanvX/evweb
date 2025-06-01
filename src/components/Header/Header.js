@@ -25,16 +25,16 @@ export default function () {
   const rightSection = document.createElement("section");
   rightSection.className = "right-section";
 
-  // const backgroundImage = document.createElement("img");
-  // backgroundImage.className = "header-image";
-  // backgroundImage.src = new URL("../../assets/GAZ.webp", import.meta.url).href;
-  // backgroundImage.alt = "Фото эвакуатора";
+  const backgroundImage = document.createElement("img");
+  backgroundImage.className = "header-image";
+  backgroundImage.src = new URL("../../assets/GAZ.webp", import.meta.url).href;
+  backgroundImage.alt = "Фото эвакуатора";
 
   leftSection.appendChild(firstText);
   leftSection.appendChild(secondText);
   leftSection.appendChild(link);
 
-  // rightSection.appendChild(backgroundImage);
+  rightSection.appendChild(backgroundImage);
 
   mainHeaderArticle.appendChild(leftSection);
   mainHeaderArticle.appendChild(rightSection);
