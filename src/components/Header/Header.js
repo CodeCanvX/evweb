@@ -1,10 +1,11 @@
-export default function () {
+export default function Header() {
   const header = document.createElement("header");
   header.className = "header";
 
   const mainHeaderArticle = document.createElement("article");
   mainHeaderArticle.className = "main-header-article";
 
+  // Левая часть
   const leftSection = document.createElement("section");
   leftSection.className = "left-section";
 
@@ -15,30 +16,27 @@ export default function () {
   const secondText = document.createElement("div");
   secondText.className = "second-text";
   secondText.textContent =
-    "Круглосуточная и безопасная перевозка ваше автомобиля по Луганску и области.";
+    "Круглосуточная и безопасная перевозка вашего автомобиля по Луганску и области.";
 
   const link = document.createElement("a");
   link.href = "tel:+00000000000";
-  link.textContent = "Вызвать эвакуатор";
   link.className = "evakuator-button";
+  link.textContent = "Вызвать эвакуатор";
 
+  leftSection.append(firstText, secondText, link);
+
+  // Правая часть
   const rightSection = document.createElement("section");
   rightSection.className = "right-section";
 
-  const backgroundImage = document.createElement("img");
-  backgroundImage.className = "header-image";
-  backgroundImage.src = new URL("../../assets/GAZ.webp", import.meta.url).href;
-  backgroundImage.alt = "Фото эвакуатора";
+  // Находим заранее вставленное изображение
+  const headerImage = document.getElementById("header-image");
+  if (headerImage) {
+    headerImage.style.display = "block"; // показать, если было скрыто
+    rightSection.appendChild(headerImage);
+  }
 
-  leftSection.appendChild(firstText);
-  leftSection.appendChild(secondText);
-  leftSection.appendChild(link);
-
-  rightSection.appendChild(backgroundImage);
-
-  mainHeaderArticle.appendChild(leftSection);
-  mainHeaderArticle.appendChild(rightSection);
-
+  mainHeaderArticle.append(leftSection, rightSection);
   header.appendChild(mainHeaderArticle);
 
   return header;
