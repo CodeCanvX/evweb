@@ -15,8 +15,13 @@ export default function Footer() {
   const phoneContainer = document.createElement("div");
   phoneContainer.className = "phone-container container";
 
-  const phoneIcon = document.createElement("i");
-  phoneIcon.className = "fa-solid fa-phone icon-kontakt";
+  const phoneIcon = document.createElement("img");
+  phoneIcon.className = " icon-kontakt";
+  phoneIcon.src = new URL(
+    "../../assets/solidphoneyel.svg",
+    import.meta.url
+  ).href;
+  phoneIcon.alt = "Phone";
 
   const phoneLink = document.createElement("a");
   phoneLink.className = "phone-number";
@@ -29,8 +34,10 @@ export default function Footer() {
   const emailContainer = document.createElement("div");
   emailContainer.className = "email-container container";
 
-  const emailIcon = document.createElement("i");
-  emailIcon.className = "fa-solid fa-envelope icon-kontakt";
+  const emailIcon = document.createElement("img");
+  emailIcon.className = " icon-kontakt";
+  emailIcon.src = new URL("../../assets/mail.svg", import.meta.url).href;
+  emailIcon.alt = "Mail";
 
   const emailLink = document.createElement("a");
   emailLink.className = "email";
@@ -47,25 +54,27 @@ export default function Footer() {
   const rightSection = document.createElement("section");
   rightSection.className = "right-section";
 
-  // Карта
   const mapContainer = document.createElement("div");
   mapContainer.id = "map";
-
   mapContainer.className = "maps";
+
   rightSection.appendChild(mapContainer);
 
-  articleFooter.appendChild(leftSection);
-  articleFooter.appendChild(rightSection);
+  articleFooter.append(leftSection, rightSection);
   footer.appendChild(articleFooter);
 
-  // Подключаем API Яндекс.Карт
+  // Вставляем footer сразу в DOM
+  document.body.appendChild(footer);
+
+  // Подключаем скрипт Яндекс.Карт
   const ymapsScript = document.createElement("script");
   ymapsScript.src =
     "https://api-maps.yandex.ru/2.1/?lang=ru_RU&apikey=5278004d-10ba-462d-bd1b-c827e2d44b97";
   ymapsScript.onload = () => {
+    // После загрузки и ready карты
     window.ymaps.ready(() => {
       const map = new ymaps.Map("map", {
-        center: [48.574041, 39.307815], // Луганск
+        center: [48.574041, 39.307815],
         zoom: 10,
       });
 

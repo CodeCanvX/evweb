@@ -2,10 +2,12 @@ export default function Popup() {
   const telefonPopUpButton = document.createElement("div");
   telefonPopUpButton.className = "telefon-pop-up-button";
 
-  const iconPopUp = document.createElement("i");
-  iconPopUp.className = "fa-solid fa-phone";
-  telefonPopUpButton.appendChild(iconPopUp);
+  const iconPopUp = document.createElement("img");
+  iconPopUp.className = "icon-popup";
+  iconPopUp.src = new URL("../../assets/solidphone.svg", import.meta.url).href;
+  iconPopUp.alt = "Phone";
 
+  telefonPopUpButton.appendChild(iconPopUp);
   const telefonWindow = document.createElement("div");
   telefonWindow.className = "telefon-window";
 
@@ -38,8 +40,13 @@ export default function Popup() {
   const mainNumberBlock = document.createElement("div");
   mainNumberBlock.className = "main-number-block";
 
-  const mainNumberIcon = document.createElement("i");
-  mainNumberIcon.className = "fa-solid fa-phone icon-inside";
+  const mainNumberIcon = document.createElement("img");
+  mainNumberIcon.className = "icon-inside";
+  mainNumberIcon.src = new URL(
+    "../../assets/solidphone.svg",
+    import.meta.url
+  ).href;
+  mainNumberIcon.alt = "Phone";
 
   const mainNumber = document.createElement("a");
   mainNumber.href = "tel:+00000000000";
@@ -60,7 +67,10 @@ export default function Popup() {
   telegramLink.target = "_blank";
 
   const telegramIcon = document.createElement("img");
-  telegramIcon.src = new URL("../../assets/telegram.png", import.meta.url).href;
+  telegramIcon.src = new URL(
+    "../../assets/telegram.webp",
+    import.meta.url
+  ).href;
   telegramIcon.alt = "Telegram";
   telegramIcon.className = "telegram-icon popup-icon";
   telegramLink.appendChild(telegramIcon);

@@ -16,17 +16,17 @@ export default function Reviews() {
     {
       name: "Иван",
       text: "Быстро и профессионально. Благодарим за своевременную транспортировку!",
-      avatar: "man.png",
+      avatar: "man.webp",
     },
     {
       name: "Анна",
       text: "Очень довольны обслуживанием. Приехали быстро, всё вежливо и чётко.",
-      avatar: "women.png",
+      avatar: "women.webp",
     },
     {
       name: "Сергей",
       text: "Эвакуировали мою машину ночью, быстро и без проблем. Рекомендую!",
-      avatar: "sergej.png",
+      avatar: "sergej.webp",
     },
   ];
 
@@ -112,10 +112,10 @@ export default function Reviews() {
     currentSlide = index;
   }
 
-  // setInterval(() => {
-  //   let next = (currentSlide + 1) % slides.length;
-  //   showSlide(next);
-  // }, 5000);
+  setInterval(() => {
+    let next = (currentSlide + 1) % slides.length;
+    showSlide(next);
+  }, 5000);
 
   return section;
 }

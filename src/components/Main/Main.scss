@@ -66,8 +66,8 @@
 .fourth-popup-content {
   width: 260px;
   font-size: 19px;
-  text-align: start;
-  margin: 20px 0 15px 10px;
+  text-align: center;
+  margin: 20px 0 15px 0px;
 }
 
 .main-number-block {
@@ -295,9 +295,21 @@
   justify-content: center;
   align-items: center;
 }
-
+.icon-popup {
+  margin-top: 5px;
+  color: black;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .icon-inside {
+  margin-top: 5px;
   margin-right: 10px;
+  color: black;
+  width: 25px;
+  height: 25px;
 }
 
 @media (max-width: 1350px) {
@@ -479,7 +491,7 @@
 
 @media (max-width: 380px) {
   .reviews-title {
-    font-size: 22px;
+    font-size: 20px;
   }
   .avatar {
     width: 35px;
@@ -488,8 +500,8 @@
   }
 
   .review-text {
-    width: 240px;
-    font-size: 14px;
+    width: 220px;
+    font-size: 12px;
   }
   .arrow.prev {
     left: 5px;
