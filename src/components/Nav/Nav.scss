@@ -1,6 +1,6 @@
 .nav {
   height: 80px;
-  $color-dark: black;
+  background-color: black;
 }
 .article-nav {
   display: flex;
@@ -10,13 +10,13 @@
 .logo {
   height: 80px;
   font-size: 35px;
-  color: $color-yel;
+  color: #ecc630;
   display: flex;
   align-items: center;
 }
 
 .link {
-  $coloer-light: white;
+  color: white;
   font-size: 25px;
   height: 80px;
   display: flex;
