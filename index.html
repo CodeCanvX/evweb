@@ -8,12 +8,9 @@
       content="Эвакуатор в Луганске. Быстрая и надёжная помощь на дороге 24/7. Звоните сейчас!"
     />
     <title>EVACUATOR.181</title>
-    <link rel="icon" type="image/svg+xml" href="/evweb/vite.svg" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
 
-    <!-- ✅ Preload основного изображения -->
-    <link rel="preload" as="image" href="./src/assets/GAZ.webp" />
-
-    <!-- ✅ Font Awesome -->
+    <!-- Font Awesome (асинхронно) -->
     <link
       rel="preload"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
@@ -26,24 +23,47 @@
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
       />
     </noscript>
+
+    <!-- Стили (если есть отдельные) -->
+    <link rel="stylesheet" href="/style.css" />
   </head>
 
   <body>
-    <div id="app"></div>
+    <div id="app">
+      <header class="header">
+        <article class="main-header-article">
+          <!-- Левая часть -->
+          <section class="left-section">
+            <div class="first-text">Услуги эвакуатора</div>
+            <div class="second-text">
+              Круглосуточная и безопасная перевозка вашего автомобиля по
+              Луганску и области.
+            </div>
+            <a href="tel:+00000000000" class="evakuator-button"
+              >Вызвать эвакуатор</a
+            >
+          </section>
 
-    <!-- ✅ Быстрое встраивание LCP-изображения -->
-    <img
-      id="header-image"
-      class="header-image"
-      src="./src/assets/GAZ.webp"
-      alt="Фото эвакуатора"
-      width="700"
-      height="500"
-      loading="eager"
-      decoding="async"
-    />
+          <!-- Правая часть -->
+          <section class="right-section">
+            <picture>
+              <source srcset="./src/assets/GAZ.webp" type="image/webp" />
+              <img
+                src="./src//assets/GAZ.jpg"
+                alt="Фото эвакуатора"
+                class="header-image"
+                width="700"
+                height="500"
+                loading="eager"
+                decoding="async"
+              />
+            </picture>
+          </section>
+        </article>
+      </header>
+    </div>
 
-    <!-- ✅ Твой JS -->
+    <!-- Основной JS -->
     <script type="module" src="./src/main.js" defer></script>
   </body>
 </html>
