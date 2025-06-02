@@ -5,7 +5,7 @@
   transform: none; /* Убираем центрирование */
   border: solid 2px black;
   width: 260px;
-  height: 350px;
+  height: 370px;
   background: white;
   border-radius: 15px;
   display: none;
@@ -296,13 +296,13 @@
   align-items: center;
 }
 .icon-popup {
-  margin-top: 5px;
   color: black;
   width: 30px;
   height: 30px;
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-bottom: 20px;
 }
 .icon-inside {
   margin-top: 5px;
@@ -511,219 +511,3 @@
     right: 5px;
   }
 }
-
-// .telefon-window {
-//   position: fixed;
-//   bottom: 20px;
-//   right: 20px;
-//   border: solid 2px black;
-//   width: 260px;
-//   height: 350px;
-//   background: white;
-//   border-radius: 15px;
-//   display: none;
-//   flex-direction: column;
-//   align-items: center;
-//   justify-content: center;
-//   z-index: 1000;
-//   transition: opacity 0.3s ease, visibility 0.3s ease;
-// }
-
-// .telefon-window.active {
-//   display: block;
-// }
-
-// .close-btn {
-//   width: 20px;
-//   height: 20px;
-//   border-radius: 50%;
-//   background-color: white;
-//   color: black;
-//   display: flex;
-//   justify-content: center;
-//   align-items: center;
-//   position: absolute;
-//   top: 15px;
-//   right: 10px;
-// }
-
-// .logo-window {
-//   font-size: 22px;
-//   color: #ecc630;
-//   padding-top: 15px;
-//   padding-left: 15px;
-// }
-
-// .logo-nav {
-//   height: 50px;
-//   background-color: black;
-//   border-radius: 13px 13px 0px 0px;
-// }
-
-// .popup-content,
-// .second-popup-content,
-// .third-popup-content,
-// .fourth-popup-content {
-//   text-align: center;
-//   width: 260px;
-// }
-
-// .popup-content {
-//   margin-top: 15px;
-//   font-weight: 600;
-//   font-size: 18px;
-// }
-
-// .second-popup-content,
-// .third-popup-content,
-// .fourth-popup-content {
-//   font-size: 19px;
-//   margin-top: 15px;
-// }
-
-// .third-popup-content {
-//   margin: 20px 0 15px 0px;
-// }
-
-// .fourth-popup-content {
-//   text-align: start;
-//   margin-left: 10px;
-// }
-
-// .main-number-block {
-//   margin: auto;
-//   display: flex;
-//   align-items: center;
-//   justify-content: center;
-//   width: 220px;
-//   height: 40px;
-//   background-color: #ecc630;
-//   border-radius: 10px;
-//   border: solid 2px black;
-// }
-
-// .telefon-pop-up-button {
-//   position: fixed;
-//   right: 30px;
-//   bottom: 30px;
-//   width: 60px;
-//   height: 60px;
-//   background: #ecc630;
-//   border-radius: 50%;
-//   display: flex;
-//   justify-content: center;
-//   align-items: center;
-//   cursor: pointer;
-//   z-index: 999;
-// }
-
-// .telegram-icon {
-//   width: 40px;
-// }
-
-// .whatsapp-icon {
-//   width: 50px;
-//   margin-right: 15px;
-// }
-
-// .social-block {
-//   display: flex;
-//   flex-direction: row-reverse;
-//   justify-content: center;
-//   align-items: center;
-// }
-
-// .icon-inside {
-//   margin-right: 10px;
-// }
-
-// .reviews-section {
-//   margin: 60px auto;
-//   max-width: 600px;
-//   text-align: center;
-// }
-
-// .reviews-title {
-//   font-size: 32px;
-//   font-weight: bold;
-//   margin-bottom: 30px;
-// }
-
-// .slider {
-//   position: relative;
-//   overflow: hidden;
-// }
-
-// .slides {
-//   display: flex;
-//   transition: transform 0.5s ease;
-// }
-
-// .slide {
-//   flex: 0 0 100%;
-//   display: none;
-//   justify-content: center;
-//   align-items: center;
-//   flex-direction: row;
-//   margin-top: 25px;
-// }
-
-// .slide.active {
-//   display: flex;
-// }
-
-// .avatar {
-//   width: 100px;
-//   height: 100px;
-//   border-radius: 50%;
-//   object-fit: cover;
-//   display: flex;
-//   align-items: center;
-//   margin-left: 25px;
-// }
-
-// .review-text {
-//   max-width: 400px;
-//   font-size: 20px;
-//   line-height: 1.4;
-//   text-align: start;
-//   margin-left: 25px;
-// }
-
-// .slider-controls {
-//   margin-top: 15px;
-// }
-
-// .dot {
-//   height: 10px;
-//   width: 10px;
-//   margin: 0 6px;
-//   background-color: #bbb;
-//   border-radius: 50%;
-//   display: inline-block;
-//   cursor: pointer;
-// }
-
-// .dot.active {
-//   background-color: #333;
-// }
-
-// .arrow {
-//   position: absolute;
-//   top: 50%;
-//   transform: translateY(-50%);
-//   background-color: transparent;
-//   font-size: 32px;
-//   border: none;
-//   cursor: pointer;
-//   user-select: none;
-//   color: #333;
-// }
-
-// .arrow.prev {
-//   left: 0px;
-// }
-
-// .arrow.next {
-//   right: 0px;
-// }
