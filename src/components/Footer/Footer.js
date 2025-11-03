@@ -64,7 +64,7 @@ export default function Footer() {
   footer.appendChild(articleFooter);
 
   // Вставляем footer сразу в DOM
-  document.body.appendChild(footer);
+ 
 
   // Подключаем скрипт Яндекс.Карт
   const ymapsScript = document.createElement("script");

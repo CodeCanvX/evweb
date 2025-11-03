@@ -28,7 +28,7 @@ export default function Nav() {
   articleNav.appendChild(sectionRight);
   nav.appendChild(articleNav);
 
-  document.body.prepend(nav);
+
 
   return nav;
 }

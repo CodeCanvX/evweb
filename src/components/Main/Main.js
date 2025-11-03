@@ -20,8 +20,7 @@ export default function Main() {
   aboutUsText.textContent =
     "Наша компания предоставляет услуги эвакуации автомобилей в Луганске и области. Работаем круглосуточно, быстро реагируем на вызовы и обеспечиваем безопасность транспортировки. В распоряжении — современный автопарк и опытные водители. Эвакуируем легковые авто, внедорожники и технику до 3 тонн. Работаем с частными и юридическими лицами. С нами — надёжно и вовремя.";
 
-  sectionAboutUs.appendChild(aboutUsTitle);
-  sectionAboutUs.appendChild(aboutUsText);
+  sectionAboutUs.append(aboutUsTitle, aboutUsText);
 
   const sectionServices = document.createElement("section");
   sectionServices.className = "section-services";
@@ -46,46 +45,18 @@ export default function Main() {
     txt.className = txtClass;
     txt.textContent = text;
 
-    li.appendChild(icon);
-    li.appendChild(txt);
+    li.append(icon, txt);
     return li;
   };
 
-  containerServicesList.appendChild(
-    createServiceItem(
-      "clock.svg",
-      "РАБОТАЕМ КРУГЛОСУТОЧНО",
-      "first-block-list block-list",
-      "first-text-list text-list"
-    )
-  );
-  containerServicesList.appendChild(
-    createServiceItem(
-      "towing.svg",
-      "Приедем к вам за 15–30 минут",
-      "second-block-list block-list",
-      "second-text-list text-list"
-    )
-  );
-  containerServicesList.appendChild(
-    createServiceItem(
-      "car.svg",
-      "Эвакуируем авто до 3,5 тонн",
-      "third-block-list block-list",
-      "third-text-list text-list"
-    )
-  );
-  containerServicesList.appendChild(
-    createServiceItem(
-      "wallet.svg",
-      "Наличный и безналичный расчёт",
-      "fourth-block-list block-list",
-      "fourth-text-list text-list"
-    )
+  containerServicesList.append(
+    createServiceItem("clock.svg","РАБОТАЕМ КРУГЛОСУТОЧНО","first-block-list block-list","first-text-list text-list"),
+    createServiceItem("towing.svg","Приедем к вам за 15–30 минут","second-block-list block-list","second-text-list text-list"),
+    createServiceItem("car.svg","Эвакуируем авто до 3,5 тонн","third-block-list block-list","third-text-list text-list"),
+    createServiceItem("wallet.svg","Наличный и безналичный расчёт","fourth-block-list block-list","fourth-text-list text-list")
   );
 
-  sectionServices.appendChild(servicesTitle);
-  sectionServices.appendChild(containerServicesList);
+  sectionServices.append(servicesTitle, containerServicesList);
 
   const sectionFoto = document.createElement("section");
   sectionFoto.className = "section-foto";
@@ -106,16 +77,15 @@ export default function Main() {
     { class: "sixth-foto foto", src: "ev.jpg", alt: "Пригород" },
   ];
 
-  fotos.forEach(({ class: className, src, alt }) => {
+  fotos.forEach(({ class: c, src, alt }) => {
     const img = document.createElement("img");
-    img.className = className;
+    img.className = c;
     img.src = new URL(`../../assets/${src}`, import.meta.url).href;
     img.alt = alt;
     containerFoto.appendChild(img);
   });
 
-  sectionFoto.appendChild(titleFoto);
-  sectionFoto.appendChild(containerFoto);
+  sectionFoto.append(titleFoto, containerFoto);
 
   const sectionStage = document.createElement("section");
   sectionStage.className = "section-stage";
@@ -127,62 +97,36 @@ export default function Main() {
   const containerStageList = document.createElement("ul");
   containerStageList.className = "container-stage-list list";
 
-  containerStageList.appendChild(
-    createServiceItem(
-      "phone.svg",
-      "Звонок диспетчеру",
-      "first-block-list-stage block-list",
-      "first-text-list-stage text-list-stage"
-    )
-  );
-  containerStageList.appendChild(
-    createServiceItem(
-      "towing.svg",
-      "Погрузка автомобиля",
-      "second-block-list-stage block-list",
-      "second-text-list-stage text-list-stage"
-    )
-  );
-  containerStageList.appendChild(
-    createServiceItem(
-      "towed.svg",
-      "Доставка до места",
-      "third-block-list-stage block-list",
-      "third-text-list-stage text-list-stage"
-    )
-  );
-  containerStageList.appendChild(
-    createServiceItem(
-      "check.svg",
-      "Оплата услуг",
-      "fourth-block-list-stage block-list",
-      "fourth-text-list-stage text-list-stage"
-    )
+  containerStageList.append(
+    createServiceItem("phone.svg","Звонок диспетчеру","first-block-list-stage block-list","first-text-list-stage text-list-stage"),
+    createServiceItem("towing.svg","Погрузка автомобиля","second-block-list-stage block-list","second-text-list-stage text-list-stage"),
+    createServiceItem("towed.svg","Доставка до места","third-block-list-stage block-list","third-text-list-stage text-list-stage"),
+    createServiceItem("check.svg","Оплата услуг","fourth-block-list-stage block-list","fourth-text-list-stage text-list-stage")
   );
 
-  sectionStage.appendChild(stageSectionTitle);
-  sectionStage.appendChild(containerStageList);
+  sectionStage.append(stageSectionTitle, containerStageList);
 
   const orderSection = document.createElement("section");
   orderSection.className = "order-section";
 
-  const link = document.createElement("a");
-  link.href = "tel:+00000000000";
-  link.textContent = "Вызвать эвакуатор";
-  link.className = "evakuator-button";
+  const callLink = document.createElement("a");
+  callLink.href = "tel:+00000000000";
+  callLink.textContent = "Вызвать эвакуатор";
+  callLink.className = "evakuator-button";
 
-  orderSection.appendChild(link);
+  orderSection.appendChild(callLink);
 
-  mainArticle.appendChild(sectionAboutUs);
-  mainArticle.appendChild(sectionServices);
-  mainArticle.appendChild(sectionFoto);
-  mainArticle.appendChild(sectionStage);
-  mainArticle.appendChild(orderSection);
-  mainArticle.appendChild(Reviews());
-  Popup();
+  mainArticle.append(
+    sectionAboutUs,
+    sectionServices,
+    sectionFoto,
+    sectionStage,
+    orderSection,
+    Reviews()
+  );
+
+  Popup(); // инициализация попапа/слушателей
 
   main.appendChild(mainArticle);
-  document.body.append(main);
-
   return main;
 }
