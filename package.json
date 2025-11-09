@@ -22,6 +22,15 @@
   "dependencies": {
     "gap": "^0.3.0",
     "gsap": "^3.13.0",
-    "leaflet": "^1.9.4"
+    "leaflet": "^1.9.4",
+    "three": "^0.181.0"
+  },
+  "main": "vite.config.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CodeCanvX/evweb.git"
+  },
+  "bugs": {
+    "url": "https://github.com/CodeCanvX/evweb/issues"
   }
 }
